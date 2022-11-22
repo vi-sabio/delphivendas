@@ -1,0 +1,28 @@
+program prjVenda;
+
+uses
+  Vcl.Forms,
+  untPrincipal in 'untPrincipal.pas' {frmPrincipal},
+  untPadrao in 'untPadrao.pas' {frmPadrao},
+  untModulo in 'untModulo.pas' {modulo: TDataModule},
+  untCadCidade in 'untCadCidade.pas' {frmCadCidade},
+  untCadProduto in 'untCadProduto.pas' {frmCadProduto},
+  untCadCliente in 'untCadCliente.pas' {frmCadCliente},
+  untPadraoPesquisa in 'untPadraoPesquisa.pas' {frmPadraoPesquisa},
+  untPesCidade in 'untPesCidade.pas' {frmPesCidade},
+  untPesCliente in 'untPesCliente.pas' {frmPadraoPesquisa1},
+  untAgenda in 'untAgenda.pas' {frmAgenda},
+  untCadAgenda in 'untCadAgenda.pas' {frmPadrao1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tmodulo, modulo);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmPadraoPesquisa1, frmPadraoPesquisa1);
+  Application.CreateForm(TfrmAgenda, frmAgenda);
+  Application.CreateForm(TfrmPadrao1, frmPadrao1);
+  Application.Run;
+end.

@@ -10,7 +10,8 @@ uses
   untCadCliente in 'untCadCliente.pas' {frmCadCliente},
   untPadraoPesquisa in 'untPadraoPesquisa.pas' {frmPadraoPesquisa},
   untPesCidade in 'untPesCidade.pas' {frmPesCidade},
-  untPesCliente in 'untPesCliente.pas' {frmPadraoPesquisa1};
+  untPesCliente in 'untPesCliente.pas' {frmPadraoPesquisa1},
+  untCadAgenda in 'untCadAgenda.pas' {frmCadAgenda};
 
 {$R *.res}
 
@@ -19,6 +20,5 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(Tmodulo, modulo);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TfrmPadraoPesquisa1, frmPadraoPesquisa1);
   Application.Run;
 end.

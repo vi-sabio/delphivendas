@@ -18,7 +18,7 @@ object modulo: Tmodulo
     Top = 32
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\Users\etec\Desktop\versao_0811\libmysql.dll'
+    VendorLib = 'C:\Users\etec\Desktop\delphivendas\libmysql.dll'
     Left = 336
     Top = 32
   end
@@ -145,6 +145,35 @@ object modulo: Tmodulo
       KeyFields = 'IDCIDADE'
       Size = 50
       Lookup = True
+    end
+  end
+  object qryAgenda: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT * FROM AGENDA')
+    Left = 192
+    Top = 184
+    object qryAgendaIDAGENDA: TIntegerField
+      FieldName = 'IDAGENDA'
+      Origin = 'IDAGENDA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryAgendaDESCRAGENDA: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'DESCRAGENDA'
+      Origin = 'DESCRAGENDA'
+      Size = 100
+    end
+    object qryAgendaDATAAGENDA: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'DATAAGENDA'
+      Origin = 'DATAAGENDA'
+    end
+    object qryAgendaHORAAGENDA: TTimeField
+      AutoGenerateValue = arDefault
+      FieldName = 'HORAAGENDA'
+      Origin = 'HORAAGENDA'
     end
   end
 end
